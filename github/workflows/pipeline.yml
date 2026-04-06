@@ -1,0 +1,25 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+#diferencia entre run y uses , run sirve para definir un comando una accion que realiza
+#uses usa accion preempaquetada de github
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del codigo
+        uses: actions/checkout@v3
+      - name: instalar node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: build
+        run: npm install
+      - name: test
+        run: npm test
+
+
