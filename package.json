@@ -11,12 +11,14 @@
   "description": "",
   "dependencies": {
     "axios": "^1.14.0",
-    "cheerio": "^1.2.0"
+    "cheerio": "^1.0.0-rc.12"
   },
   "devDependencies": {
     "jest": "^30.3.0"
   },
-  "jest":{
-    "testMatch":["**/tests/**/*.test.js"]
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
   }
 }
