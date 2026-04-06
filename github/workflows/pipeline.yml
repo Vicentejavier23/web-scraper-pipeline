@@ -1,5 +1,3 @@
-name: CI/CD Pipeline
-
 on:
   push:
     branches: [main]
@@ -11,15 +9,13 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout del codigo
+      - name: descarga del codigo
         uses: actions/checkout@v3
-      - name: instalar node.js
+      - name: instalacion de version
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: build
+      - name: instalacion depencia
         run: npm install
-      - name: test
+      - name: correr test
         run: npm test
-
-
