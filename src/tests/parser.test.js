@@ -1,4 +1,4 @@
-const { parse } = require("../src/parser")
+const { parse } = require("../parser")
 
 test("primer test ",() =>{
     const html = `
